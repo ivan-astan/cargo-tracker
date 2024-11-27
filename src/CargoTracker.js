@@ -84,11 +84,11 @@ const CargoTracker = () => {
         <div className="container-fluid mt-5">
             <h1 className={'text-center mb-5'}>Отслеживание грузов</h1>
             <form onSubmit={handleAddCargo} className="mb-4">
-                <div className="row">
-                    <div className="col">
+                <div className="row justify-content-center align-items-center">
+                    <div className="col-lg-2 mt-2">
                         <input className="form-control" type="text" placeholder="Название груза" value={cargoName} onChange={(e) => setCargoName(e.target.value)} required />
                     </div>
-                    <div className="col">
+                    <div className="col-lg-2 mt-2">
                         <select className="form-control" value={cargoStatus} onChange={(e) => setCargoStatus(e.target.value)} required>
                             <option value="" disabled>Выберите статус</option>
                             <option value="Ожидает отправки">Ожидает отправки</option>
@@ -96,16 +96,19 @@ const CargoTracker = () => {
                             <option value="Доставлен">Доставлен</option>
                         </select>
                     </div>
-                    <div className="col">
+                    <div className="col-lg-2 mt-2">
                         <input className="form-control" type="text" placeholder="Пункт отправления" value={origin} onChange={(e) => setOrigin(e.target.value)} required />
                     </div>
-                    <div className="col">
+                    <div className="col-lg-2 mt-2">
                         <input className="form-control" type="text" placeholder="Пункт назначения" value={destination} onChange={(e) => setDestination(e.target.value)} required />
                     </div>
-                    <div className="col">
+                    <div className="col-lg-2 mt-2">
                         <input className="form-control" type="date" value={departureDate} onChange={(e) => setDepartureDate(e.target.value)} required />
                     </div>
-                    <button type="submit" className="btn btn-primary mt-3">Добавить груз</button>
+                    <div className="row justify-content-center align-items-center">
+                        <button type="submit" className="btn btn-primary mt-3 col-6">Добавить груз</button>
+                    </div>
+
                 </div>
             </form>
 
